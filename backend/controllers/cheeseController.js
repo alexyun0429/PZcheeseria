@@ -2,11 +2,11 @@ const cheeses = require("../data/cheeseData");
 
 exports.getCheeses = (req, res) => {
   try {
-    console.log("Fetching cheeses:", cheeses);
+    console.log("Fetching cheeses 1:", cheeses);
     res.json(cheeses);
   } catch (error) {
     console.log(cheeses);
-    console.error("Error fetching cheeses:", error);
+    console.error("Error fetching cheeses 2:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };

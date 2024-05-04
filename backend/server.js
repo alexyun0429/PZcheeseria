@@ -1,17 +1,36 @@
 const express = require("express");
-const cors = require("cors");
 const app = express();
-const port = 3001;
-const cheeseRoutes = require("./routes/cheeseRoutes");
+const path = require("path");
+
+// Correctly point to the directory where images are stored
+app.use("/images", express.static(path.join(__dirname, "data/images")));
+
+// Existing setup for body-parser, cors, etc.
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
+
+// Import your routes
+const cheeseRoutes = require("./routes/cheeseRoutes");
+
+// Use routes
 app.use("/api", cheeseRoutes);
 
+// Serve API documentation set up via Swagger, if you have it configured
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swaggerConfig");
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// Home route or health check route
 app.get("/", (req, res) => {
-  res.send("Cheeseria backend is running...");
+  console.log("server get.");
+  res.send("Cheeseria API is running...");
 });
 
+// Listen on the configured port
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
