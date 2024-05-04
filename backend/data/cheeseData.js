@@ -37,4 +37,3 @@ const cheeses = [
 ];
 
 module.exports = cheeses;
-

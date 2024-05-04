@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CheeseCard from "./components/CheeseCard";
 
 function App() {
   const [cheeses, setCheeses] = useState([]);
+  const [selectedCheese, setSelectedCheese] = useState(null);
 
   useEffect(() => {
     axios
@@ -10,17 +12,36 @@ function App() {
       .then((response) => {
         setCheeses(response.data);
       })
-      .catch((error) => console.error("Error fetching cheeses:", error));
+      .catch((error) => {
+        console.error("Error fetching cheeses:", error);
+        console.log(error.response ?? error);
+      });
   }, []);
 
   return (
     <div>
-      {cheeses.map((cheese) => (
-        <div key={cheese.id}>
-          <h2>{cheese.name}</h2>
-          <p>{cheese.pricePerKilo}</p>
-        </div>
-      ))}
+      <h1>Cheeseria</h1>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+        }}
+      >
+        {cheeses.map((cheese) => (
+          <CheeseCard
+            key={cheese.id}
+            cheese={cheese}
+            onClick={setSelectedCheese}
+          />
+        ))}
+      </div>
+      {selectedCheese && (
+        <CheeseDetails
+          cheese={selectedCheese}
+          onClose={() => setSelectedCheese(null)}
+        />
+      )}
     </div>
   );
 }
