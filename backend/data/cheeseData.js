@@ -11,7 +11,7 @@ const cheeses = [
     name: "Gouda",
     pricePerKilo: 25,
     colour: "Pale Yellow",
-    imageUrl: "Gouda.jpeg",
+    imageUrl: "gouda.jpeg",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const cheeses = [
     id: 4,
     name: "American Cheese",
     pricePerKilo: 22,
-    colour: "Blue",
+    colour: "Very Yellow",
     imageUrl: "americancheese.jpeg",
   },
   {

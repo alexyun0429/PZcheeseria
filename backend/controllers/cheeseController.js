@@ -1,46 +1,47 @@
-const cheeses = require("../data/cheeseData");
+// controllers/cheeseController.js
+let cheeses = require("../data/cheeseData");
 
-exports.getCheeses = (req, res) => {
-  try {
-    console.log("Fetching cheeses 1:", cheeses);
-    res.json(cheeses);
-  } catch (error) {
-    console.log(cheeses);
-    console.error("Error fetching cheeses 2:", error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
+const getCheeses = (req, res) => {
+  res.json(cheeses);
 };
 
-exports.createCheese = (req, res) => {
+const getCheeseById = (req, res) => {
+  const cheese = cheeses.find((c) => c.id === parseInt(req.params.id));
+  if (!cheese) return res.status(404).json({ message: "Cheese not found" });
+  res.json(cheese);
+};
+
+const addCheese = (req, res) => {
   const newCheese = {
     id: cheeses.length + 1,
-    name: req.body.name,
-    pricePerKilo: req.body.pricePerKilo,
-    colour: req.body.colour,
-    imageUrl: req.body.imageUrl,
+    ...req.body,
   };
   cheeses.push(newCheese);
   res.status(201).json(newCheese);
 };
 
-exports.updateCheese = (req, res) => {
-  const index = cheeses.findIndex(
-    (cheese) => cheese.id === parseInt(req.params.id)
-  );
-  if (index === -1) {
-    return res.status(404).send("Cheese not found.");
-  }
-  cheeses[index] = { ...cheeses[index], ...req.body };
+const updateCheese = (req, res) => {
+  const index = cheeses.findIndex((c) => c.id === parseInt(req.params.id));
+  if (index === -1)
+    return res.status(404).json({ message: "Cheese not found" });
+
+  cheeses[index] = { id: parseInt(req.params.id), ...req.body };
   res.json(cheeses[index]);
 };
 
-exports.deleteCheese = (req, res) => {
-  const index = cheeses.findIndex(
-    (cheese) => cheese.id === parseInt(req.params.id)
-  );
-  if (index === -1) {
-    return res.status(404).send("Cheese not found.");
-  }
+const deleteCheese = (req, res) => {
+  const index = cheeses.findIndex((c) => c.id === parseInt(req.params.id));
+  if (index === -1)
+    return res.status(404).json({ message: "Cheese not found" });
+
   cheeses.splice(index, 1);
   res.status(204).send();
+};
+
+module.exports = {
+  getCheeses,
+  getCheeseById,
+  addCheese,
+  updateCheese,
+  deleteCheese,
 };

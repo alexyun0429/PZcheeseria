@@ -1,0 +1,34 @@
+/* AboutSection.css */
+.about-section {
+  background: #1c2d48;
+  color: #ffffff;
+  padding: 30px;
+  text-align: left;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.location-hours {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.location,
+.hours {
+  width: 48%;
+}
+
+.location h3,
+.hours h3 {
+  color: #fbc92b;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: #ffffff;
+  line-height: 1.5;
+}

@@ -1,0 +1,33 @@
+.cheese-list {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cheese-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px;
+  display: inline-block;
+}
+
+.cheese-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cheese-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.cheese-card input {
+  margin-top: 8px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}

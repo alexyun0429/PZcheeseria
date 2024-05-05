@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CheeseCard from "../components/CheeseCard";
-import "../styles/HomePage.css"; // Ensure this CSS file handles layout and popup styling
+import "../styles/HomePage.css";
 
 function HomePage() {
   const [cheeses, setCheeses] = useState([]);

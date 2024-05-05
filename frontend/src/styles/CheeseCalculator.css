@@ -1,0 +1,35 @@
+.cheese-calculator {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.cheese-calculator h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.cheese-calculator select,
+.cheese-calculator input,
+.cheese-calculator button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.cheese-calculator button {
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cheese-calculator button:hover {
+  background-color: #218838;
+}
+
+.cheese-calculator p {
+  color: #555;
+  font-size: 1.2rem;
+}

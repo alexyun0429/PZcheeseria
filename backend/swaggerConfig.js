@@ -1,24 +1,17 @@
+// swaggerConfig.js
 const swaggerJsdoc = require("swagger-jsdoc");
-const swaggerDefinition = {
-  openapi: "3.0.0",
-  info: {
-    title: "Cheeseria API",
-    version: "1.0.0",
-    description: "A simple API for Cheeseria operations",
-  },
-  servers: [
-    {
-      url: "http://localhost:3000",
-      description: "Development server",
+
+const swaggerOptions = {
+  swaggerDefinition: {
+    openapi: "3.0.0",
+    info: {
+      title: "PZ Cheeseria API",
+      version: "1.0.0",
     },
-  ],
+  },
+  apis: ["./routes/*.js"],
 };
 
-const options = {
-  swaggerDefinition,
-  apis: ["./routes/*.js", "./models/*.js"],
-};
+const swaggerDocs = swaggerJsdoc(swaggerOptions);
 
-const swaggerSpec = swaggerJsdoc(options);
-
-module.exports = swaggerSpec;
+module.exports = swaggerDocs;
