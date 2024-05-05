@@ -1,25 +1,33 @@
-/* AboutSection.css */
 .about-section {
   background: #1c2d48;
   color: #ffffff;
-  padding: 30px;
-  text-align: left;
+  padding: 40px;
+  text-align: center;
 }
 
 .about-section h2 {
-  text-align: center;
+  color: #ffffff;
+}
+
+.about-section p {
+  max-width: 70%;
+  margin: 0 auto 30px;
+  line-height: 1.6;
   color: #ffffff;
 }
 
 .location-hours {
   display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
+  justify-content: center;
+  gap: 10%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .location,
 .hours {
-  width: 48%;
+  flex: 1;
+  text-align: left;
 }
 
 .location h3,
@@ -28,7 +36,8 @@
   margin-bottom: 10px;
 }
 
-.about-section p {
+.location p,
+.hours p {
   color: #ffffff;
-  line-height: 1.5;
+  line-height: 1.4;
 }

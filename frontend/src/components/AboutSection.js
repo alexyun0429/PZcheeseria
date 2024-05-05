@@ -13,7 +13,7 @@ const AboutSection = () => {
       <div className="location-hours">
         <div className="location">
           <h3>Location</h3>
-          <p>Level 4/260 Queen St, Some City ZZZ 4000</p>
+          <p>1234 Street, New York, NY 10002</p>
         </div>
         <div className="hours">
           <h3>Working hours</h3>

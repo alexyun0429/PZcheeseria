@@ -1,18 +1,17 @@
-// components/ParallaxSection.js
 import React from "react";
 import "../styles/ParallaxSection.css";
 
 const ParallaxSection = ({ backgroundImage, title, children }) => {
   return (
-    <div
-      className="parallax-section"
+    <section
+      className="parallax-container"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="content">
-        <h1>{title}</h1>
-        {children}
+      <div className="overlay">
+        <h2>{title}</h2>
+        <div className="parallax-content">{children}</div>
       </div>
-    </div>
+    </section>
   );
 };
 
