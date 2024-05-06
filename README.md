@@ -21,17 +21,19 @@ Ps Cheeseria is a sample project for a cheeseria with a parallax scrolling front
 
    - Implement a persistent database such as MongoDB or PostgreSQL for cheese data.
    - Use Mongoose or Sequelise for database modeling.
+   - Better docker containerise and use the cloud to store (AWS / Azure).
 
 3. **Admin Panel**:
 
    - Create a secure admin panel for adding, editing, and deleting cheese products.
+   - Implement proper structure, MVC or Microservice to increase management and security.
 
 4. **Authentication & Authorisation**:
 
    - Add user authentication and role-based authorisation.
 
 5. **Styling**:
-   - Improve the overall design using a design system like Material-UI or Tailwind CSS.
+   - Improve the overall design using a design system like Tailwind CSS.
 
 ## Getting Started
 
@@ -112,9 +114,9 @@ npm test
 Pscheeseria/
 ├── backend/
 │    ├── Dockerfile
-|    ├── Data
+|    ├── Data/
 │    │    ├── CheeseData.js
-|    |    └── images
+|    |    └── images/
 │    │    │    ├── americancheese.jpeg
 │    │    │    ├── brie.jpeg
 │    │    │    ├── camembert.jpeg
@@ -125,7 +127,7 @@ Pscheeseria/
 │    ├── cheeseData.js
 │    ├── package.json
 │    └── tests/
-│    └── cheese.test.js
+│    |    └── cheese.test.js
 |
 ├── frontend/
 │    ├── Dockerfile
@@ -152,7 +154,7 @@ Pscheeseria/
 │    ├── .babelrc
 │    ├── package.json
 │    ├── public/
-│    │    ├── images
+│    │    ├── images/
 │    │    │    ├── backgroundImage.jpg
 │    │    │    ├── catering.jpeg
 │    │    │    ├── cheese-selection.jpeg
