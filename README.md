@@ -106,7 +106,7 @@ npm test
 - Containerisation: Docker, Docker Compose
 
 ## Project Structure
-
+```java
 PZcheeseria/
 ├── backend/
 │ ├── Dockerfile
@@ -147,3 +147,8 @@ PZcheeseria/
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
+```
+
+## License
+This project is licensed under the MIT License.
+
