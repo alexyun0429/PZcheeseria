@@ -109,41 +109,50 @@ npm test
 
 PZcheeseria/
 ├── backend/
-│ ├── Dockerfile
-| ├── Data
-│ │ ├── CheeseData.js
-| | └── images
-│ │ │ ├── americancheese.jpeg
-│ │ │ ├── brie.jpeg
-│ │ │ ├── camembert.jpeg
-│ │ │ ├── gouda.jpeg
-| | | └── pecorinoromano.jpeg
-│ ├── node_modules/
-│ ├── server.js
-│ ├── cheeseData.js
-│ ├── package.json
-│ └── tests/
-│ └── cheese.test.js
+|   ├── controllers
+|   |   └── cheeseController.js
+│   ├── Dockerfile
+|   ├── Data
+│   │   ├── CheeseData.js
+|   |   └── images
+│   │   │   ├── americancheese.jpeg
+│   │   │   ├── brie.jpeg
+│   │   │   ├── camembert.jpeg
+│   │   │   ├── gouda.jpeg
+|   |   |   └── pecorinoromano.jpeg
+│   ├── node_modules/
+│   ├── server.js
+│   ├── swaggerConfig.js
+│   ├── cheeseData.js
+│   ├── package.json
+│   ├── tests/
+│   |    └── cheese.test.js
+|   ├── routes 
+|        └── cheeseRoutes.js
+|
 ├── frontend/
-│ ├── Dockerfile
-│ ├── jest.config.js
-│ ├── setupTests.js
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── **test**/
-│ │ │ │ ├── CheeseList.test.js
-│ │ │ │ └── ParallaxSection.test.js
-│ │ │ ├── CheeseList.js
-│ │ │ ├── ParallaxSection.js
-│ │ │ ├── CheeseModal.js
-│ │ ├── styles/
-│ │ ├── App.js
-│ │ └── index.js
-│ ├── .babelrc
-│ ├── package.json
-│ └── public/
-│ ├── images/
-│ └── index.html
+│   ├── Dockerfile
+│   ├── jest.config.js
+│   ├── setupTests.js
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── __test__/
+│   │   │   │   ├── CheeseList.test.js
+│   │   │   │   └── ParallaxSection.test.js
+│   │   │   ├── CheeseList.js
+│   │   │   ├── ParallaxSection.js
+│   │   │   ├── CheeseModal.js
+│   │   ├── styles/
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── .babelrc
+│   ├── package.json
+│   └── public/
+│       ├── images/
+│       └── index.html
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
+
+## License
+This project is licensed under the MIT License.
