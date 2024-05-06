@@ -16,3 +16,10 @@ const ParallaxSection = ({ backgroundImage, title, children }) => {
 };
 
 export default ParallaxSection;
+
+/*
+### Potential Improvements ###
+1. **Accessibility**: Add proper ARIA roles and attributes for better accessibility.
+2. **Parallax Optimization**: Optimize parallax effect for better performance across devices.
+3. **Customizable Overlay**: Make the overlay color and opacity customizable via props.
+*/

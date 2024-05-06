@@ -83,3 +83,11 @@ const CheeseList = () => {
 };
 
 export default CheeseList;
+
+/*
+### Potential Improvements ###
+1. **Persistent Storage**: Implement persistent storage like MongoDB, PostgreSQL, or SQLite for cheese data instead of a static JSON file.
+2. **Validation**: Add validation for weight input to prevent invalid or negative values.
+3. **Admin Interface**: Create an admin interface for CRUD operations (add/edit/delete) on cheese data.
+4. **Performance Optimization**: Implement memoization or React Query for efficient data fetching and caching.
+*/
