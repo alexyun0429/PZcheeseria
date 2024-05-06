@@ -72,13 +72,15 @@ PZ Cheeseria is a sample project for a cheeseria with a parallax scrolling front
 
 ### Docker Setup
 
-1. From root directory (PZCheeseria) run:
+1. Run docker first.
+   
+2. From the root directory (PZCheeseria) run:
 
    ```bash
    docker-compose up --build
    ```
 
-2. Access the frontend at http://localhost:3000 and the backend at http://localhost:5050.
+3. Access the frontend at http://localhost:3000 and the backend at http://localhost:5050.
 
 ### API Documentation
 
