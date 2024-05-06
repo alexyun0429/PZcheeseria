@@ -106,3 +106,44 @@ npm test
 - Containerisation: Docker, Docker Compose
 
 ## Project Structure
+
+PZcheeseria/
+├── backend/
+│ ├── Dockerfile
+| ├── Data
+│ │ ├── CheeseData.js
+| | └── images
+│ │ │ ├── americancheese.jpeg
+│ │ │ ├── brie.jpeg
+│ │ │ ├── camembert.jpeg
+│ │ │ ├── gouda.jpeg
+| | | └── pecorinoromano.jpeg
+│ ├── node_modules/
+│ ├── server.js
+│ ├── cheeseData.js
+│ ├── package.json
+│ └── tests/
+│ └── cheese.test.js
+├── frontend/
+│ ├── Dockerfile
+│ ├── jest.config.js
+│ ├── setupTests.js
+│ ├── src/
+│ │ ├── components/
+│ │ │ ├── **test**/
+│ │ │ │ ├── CheeseList.test.js
+│ │ │ │ └── ParallaxSection.test.js
+│ │ │ ├── CheeseList.js
+│ │ │ ├── ParallaxSection.js
+│ │ │ ├── CheeseModal.js
+│ │ ├── styles/
+│ │ ├── App.js
+│ │ └── index.js
+│ ├── .babelrc
+│ ├── package.json
+│ └── public/
+│ ├── images/
+│ └── index.html
+├── docker-compose.yml
+├── .gitignore
+└── README.md
