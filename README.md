@@ -1,6 +1,6 @@
-## PZ Cheeseria
+## Ps Cheeseria
 
-PZ Cheeseria is a sample project for a cheeseria with a parallax scrolling front end, cheese list, and a calculator for pricing cheeses by weight. It demonstrates CRUD functionality for managing the cheese list, implemented using a Node.js backend and a React.js frontend.
+Ps Cheeseria is a sample project for a cheeseria with a parallax scrolling front end, a cheese list, and a calculator for pricing cheeses by weight. It demonstrates CRUD functionality for managing the cheese list, implemented using a Node.js backend and a React.js frontend.
 
 ## Features
 
@@ -20,15 +20,15 @@ PZ Cheeseria is a sample project for a cheeseria with a parallax scrolling front
 2. **Additional Persistence Mechanism**:
 
    - Implement a persistent database such as MongoDB or PostgreSQL for cheese data.
-   - Use Mongoose or Sequelize for database modeling.
+   - Use Mongoose or Sequelise for database modeling.
 
 3. **Admin Panel**:
 
    - Create a secure admin panel for adding, editing, and deleting cheese products.
 
-4. **Authentication & Authorization**:
+4. **Authentication & Authorisation**:
 
-   - Add user authentication and role-based authorization.
+   - Add user authentication and role-based authorisation.
 
 5. **Styling**:
    - Improve the overall design using a design system like Material-UI or Tailwind CSS.
@@ -46,13 +46,13 @@ PZ Cheeseria is a sample project for a cheeseria with a parallax scrolling front
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/PZcheeseria.git
+   git clone https://github.com/your-repo/Pscheeseria.git
 
    ```
 
 2. Navigate to the backend directory and install dependencies:
    ```bash
-   cd PZcheeseria/backend
+   cd Pscheeseria/backend
    npm install
    ```
 3. Navigate to the frontend directory and install dependencies:
@@ -74,7 +74,7 @@ PZ Cheeseria is a sample project for a cheeseria with a parallax scrolling front
 
 1. Run docker first.
    
-2. From the root directory (PZCheeseria) run:
+2. From the root directory (PsCheeseria) run:
 
    ```bash
    docker-compose up --build
@@ -109,43 +109,56 @@ npm test
 
 ## Project Structure
 ```java
-PZcheeseria/
+Pscheeseria/
 ├── backend/
-│ ├── Dockerfile
-| ├── Data
-│ │ ├── CheeseData.js
-| | └── images
-│ │ │ ├── americancheese.jpeg
-│ │ │ ├── brie.jpeg
-│ │ │ ├── camembert.jpeg
-│ │ │ ├── gouda.jpeg
-| | | └── pecorinoromano.jpeg
-│ ├── node_modules/
-│ ├── server.js
-│ ├── cheeseData.js
-│ ├── package.json
-│ └── tests/
-│ └── cheese.test.js
+│    ├── Dockerfile
+|    ├── Data
+│    │    ├── CheeseData.js
+|    |    └── images
+│    │    │    ├── americancheese.jpeg
+│    │    │    ├── brie.jpeg
+│    │    │    ├── camembert.jpeg
+│    │    │    ├── gouda.jpeg
+|    |    |    └── pecorinoromano.jpeg
+│    ├── node_modules/
+│    ├── server.js
+│    ├── cheeseData.js
+│    ├── package.json
+│    └── tests/
+│    └── cheese.test.js
+|
 ├── frontend/
-│ ├── Dockerfile
-│ ├── jest.config.js
-│ ├── setupTests.js
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── **test**/
-│ │ │ │ ├── CheeseList.test.js
-│ │ │ │ └── ParallaxSection.test.js
-│ │ │ ├── CheeseList.js
-│ │ │ ├── ParallaxSection.js
-│ │ │ ├── CheeseModal.js
-│ │ ├── styles/
-│ │ ├── App.js
-│ │ └── index.js
-│ ├── .babelrc
-│ ├── package.json
-│ └── public/
-│ ├── images/
-│ └── index.html
+│    ├── Dockerfile
+│    ├── jest.config.js
+│    ├── setupTests.js
+│    ├── src/
+│    │    ├── components/
+│    │    │    ├── **test**/
+│    │    │    │    ├── CheeseList.test.js
+│    │    │    │    └── ParallaxSection.test.js
+│    │    │    ├── CheeseList.js
+│    │    │    ├── ParallaxSection.js
+│    │    │    └── CheeseModal.js
+│    │    ├── styles/
+│    │    │    ├── AboutSection.css
+│    │    │    ├── App.css
+│    │    │    ├── CheeseCalculator.css
+│    │    │    ├── CheeseDetail.css
+│    │    │    ├── CheeseList.css
+│    │    │    ├── ParallaxSection.css
+│    │    │    └── index.css
+│    │    ├── App.js
+│    │    └── index.js
+│    ├── .babelrc
+│    ├── package.json
+│    ├── public/
+│    │    ├── images
+│    │    │    ├── backgroundImage.jpg
+│    │    │    ├── catering.jpeg
+│    │    │    ├── cheese-selection.jpeg
+|    |    |    └── cheese-shop.jpeg
+│    └──  └── index.html
+|
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
