@@ -20,6 +20,6 @@ export default ParallaxSection;
 /*
 ### Potential Improvements ###
 1. **Accessibility**: Add proper ARIA roles and attributes for better accessibility.
-2. **Parallax Optimization**: Optimize parallax effect for better performance across devices.
-3. **Customizable Overlay**: Make the overlay color and opacity customizable via props.
+2. **Parallax Optimisation**: Optimise parallax effect for better performance across devices.
+3. **Customisable Overlay**: Make the overlay colour and opacity customisable via props.
 */
