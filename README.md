@@ -1,6 +1,6 @@
-## Ps Cheeseria
+## PZ Cheeseria
 
-Ps Cheeseria is a sample project for a cheeseria with a parallax scrolling front end, a cheese list, and a calculator for pricing cheeses by weight. It demonstrates CRUD functionality for managing the cheese list, implemented using a Node.js backend and a React.js frontend.
+PZ Cheeseria is a sample project for a cheeseria with a parallax scrolling front end, a cheese list, and a calculator for pricing cheeses by weight. It demonstrates CRUD functionality for managing the cheese list, implemented using a Node.js backend and a React.js frontend.
 
 ## Features
 
